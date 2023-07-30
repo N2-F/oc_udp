@@ -3,8 +3,12 @@ auto enable udp proxy openclash
 
 install 
 
+```
 wget --no-check-certificate "https://raw.githubusercontent.com/N2-F/oc_udp/main/oc_udp" -O /usr/sbin/oc_udp && chmod +x /usr/sbin/oc_udp
+```
 
 tambahkan ke startup
 
+```
 /usr/sbin/oc_udp
+```

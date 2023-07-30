@@ -1,0 +1,19 @@
+#!/bin/bash
+
+enable_udp_proxy=$(uci get openclash.config.enable_udp_proxy 2>/dev/null)
+
+if [ -n "$enable_udp_proxy" ]; then
+    if [ "$enable_udp_proxy" = "1" ]; then
+        echo "UDP proxy is already enabled."
+    else
+        uci set openclash.config.enable_udp_proxy="1"
+        uci commit openclash
+        /etc/init.d/openclash restart
+    fi
+else
+
+    uci set openclash.config.enable_udp_proxy="1"
+    uci commit openclash
+    /etc/init.d/openclash restart
+    echo "UDP proxy has been enabled."
+fi

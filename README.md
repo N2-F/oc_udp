@@ -1,8 +1,10 @@
 # oc_udp
-auto enable udp proxy setting di openclash
+auto enable udp proxy openclash
 
-taro file nya di folder 
-/usr/sbin
-chmod +x oc_udp
-dan masukkan di startup
+install 
+
+wget --no-check-certificate "https://raw.githubusercontent.com/N2-F/oc_udp/main/oc_udp" -O /usr/sbin/oc_udp && chmod +x /usr/sbin/oc_udp
+
+tambahkan ke startup
+
 /usr/sbin/oc_udp
